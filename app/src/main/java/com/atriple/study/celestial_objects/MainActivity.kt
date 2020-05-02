@@ -2,6 +2,7 @@ package com.atriple.study.celestial_objects
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atriple.study.celestial_objects.model.CelestialObject
 import com.atriple.study.celestial_objects.model.generate
@@ -16,5 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         rvCelestialObject = findViewById(R.id.rv_celestial_objects)
         rvCelestialObject.setHasFixedSize(true)
+
+        rvCelestialObject.layoutManager = LinearLayoutManager(this)
+
     }
 }
