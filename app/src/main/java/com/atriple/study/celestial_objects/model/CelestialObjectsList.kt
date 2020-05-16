@@ -24,6 +24,16 @@ fun generate() : List<CelestialObject>{
                 of Earth.
             """.trimIndent(),
             R.drawable.img_earth
+        ),
+        CelestialObject(
+            "Mercury",
+            "Planet",
+            """
+                Mercury is the smallest and innermost planet in the Solar System. 
+                Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System. 
+                It is named after the Roman deity Mercury, the messenger of the gods.
+            """.trimIndent(),
+            R.drawable.img_earth
         )
     )
 }
