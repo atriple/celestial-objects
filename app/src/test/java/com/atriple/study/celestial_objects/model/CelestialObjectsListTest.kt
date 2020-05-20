@@ -5,10 +5,15 @@ import org.junit.Test
 import org.junit.Assert.*
 
 class CelestialObjectsListTest {
+    private val listOfCelestialObject : List<CelestialObject> = generate()
 
     @Test
     fun generate_earthName() {
-        val listOfCelestialObject : List<CelestialObject> = generate()
         assertEquals("Earth", listOfCelestialObject[0].name)
+    }
+
+    @Test
+    fun generate_correctSize(){
+        assertEquals(3, listOfCelestialObject.size)
     }
 }

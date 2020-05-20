@@ -8,12 +8,14 @@ fun generate() : List<CelestialObject>{
         CelestialObject(
             "Earth",
             "planet",
+            "Solar System",
             "Lorem Ipsum",
             R.drawable.img_earth
         ),
         CelestialObject(
             "Mars",
             "Planet",
+            "Solar System",
             """
                 Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. 
                 In English, Mars carries the name of the Roman god of war and is often referred to as the 'Red Planet'. 
@@ -28,6 +30,7 @@ fun generate() : List<CelestialObject>{
         CelestialObject(
             "Mercury",
             "Planet",
+            "Solar System",
             """
                 Mercury is the smallest and innermost planet in the Solar System. 
                 Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System. 
