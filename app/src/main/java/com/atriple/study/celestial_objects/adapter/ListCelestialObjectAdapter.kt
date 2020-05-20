@@ -8,8 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.atriple.study.celestial_objects.R
 import com.atriple.study.celestial_objects.model.CelestialObject
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
-class ListCelestialObjectAdapter(private val listCelestialObject: ArrayList<CelestialObject>) :
+class ListCelestialObjectAdapter(private val listCelestialObject: List<CelestialObject>) :
     RecyclerView.Adapter<ListCelestialObjectAdapter.ListViewHolder>() {
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -17,6 +19,7 @@ class ListCelestialObjectAdapter(private val listCelestialObject: ArrayList<Cele
         var tvType: TextView = itemView.findViewById(R.id.tv_item_type)
         var tvLocation: TextView = itemView.findViewById(R.id.tv_item_location)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -31,6 +34,14 @@ class ListCelestialObjectAdapter(private val listCelestialObject: ArrayList<Cele
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val celestialObject = listCelestialObject[position]
-        TODO("Work In Progress")
+
+        Glide.with(holder.itemView.context)
+            .load(celestialObject.image)
+            .apply(RequestOptions().override(55,55))
+            .into(holder.imgPhoto)
+
+        holder.tvName.text = celestialObject.name
+        holder.tvType.text = celestialObject.type
+        holder.tvLocation.text = celestialObject.location
     }
 }
