@@ -14,6 +14,6 @@ class CelestialObjectsListTest {
 
     @Test
     fun generate_correctSize(){
-        assertEquals(3, listOfCelestialObject.size)
+        assertEquals(10, listOfCelestialObject.size)
     }
 }
