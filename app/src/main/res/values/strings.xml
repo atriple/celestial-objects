@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">celestial-objects</string>
+    <string name="app_name">Celestial Objects</string>
     <string name="item_name">Earth</string>
     <string name="item_type">Planet</string>
     <string name="item_location">Solar System</string>
