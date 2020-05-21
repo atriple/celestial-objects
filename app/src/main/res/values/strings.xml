@@ -3,4 +3,7 @@
     <string name="item_name">Earth</string>
     <string name="item_type">Planet</string>
     <string name="item_location">Solar System</string>
+    <string name="dicoding_name">Andi A</string>
+    <string name="dicoding_email">rahasia@dong.wkwk</string>
+    <string name="action_about">About</string>
 </resources>
