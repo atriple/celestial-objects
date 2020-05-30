@@ -1,5 +1,6 @@
 package com.atriple.study.celestial_objects
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_about -> {
+            val aboutIntent = Intent(this@MainActivity, AboutActivity::class.java)
+            startActivity(aboutIntent)
             true
         }
 
