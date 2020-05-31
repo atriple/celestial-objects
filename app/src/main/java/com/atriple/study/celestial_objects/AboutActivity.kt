@@ -9,8 +9,8 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
-//        setSupportActionBar(findViewById(R.id.about_toolbar))
-//
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        setSupportActionBar(findViewById(R.id.about_toolbar))
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }
