@@ -13,7 +13,7 @@ import com.atriple.study.celestial_objects.model.generate
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvCelestialObject: RecyclerView
-    private val listOfCelestialObject: List<CelestialObject> = generate()
+    private val listOfCelestialObject: List<CelestialObject> = generate() //TODO: Lazy Load this List
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +24,16 @@ class MainActivity : AppCompatActivity() {
         rvCelestialObject.setHasFixedSize(true)
 
         rvCelestialObject.layoutManager = LinearLayoutManager(this)
-        rvCelestialObject.adapter = ListCelestialObjectAdapter(listOfCelestialObject)
 
+        val celestialObjectAdapter = ListCelestialObjectAdapter(listOfCelestialObject)
+        rvCelestialObject.adapter = celestialObjectAdapter
+        celestialObjectAdapter.setOnItemClickCallback(object: ListCelestialObjectAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: CelestialObject) {
+                val detailIntent = Intent(this@MainActivity, DetailActivity::class.java)
+                detailIntent.putExtra("name", data.name)
+                startActivity(detailIntent)
+            }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -39,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(aboutIntent)
             true
         }
-
         else -> {
             super.onOptionsItemSelected(item)
         }

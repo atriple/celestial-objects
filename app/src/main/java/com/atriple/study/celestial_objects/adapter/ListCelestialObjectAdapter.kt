@@ -13,6 +13,15 @@ import com.bumptech.glide.request.RequestOptions
 
 class ListCelestialObjectAdapter(private val listCelestialObject: List<CelestialObject>) :
     RecyclerView.Adapter<ListCelestialObjectAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: CelestialObject)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
@@ -25,6 +34,7 @@ class ListCelestialObjectAdapter(private val listCelestialObject: List<Celestial
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_row_celestial_object, parent, false)
+
         return ListViewHolder(view)
     }
 
@@ -43,5 +53,8 @@ class ListCelestialObjectAdapter(private val listCelestialObject: List<Celestial
         holder.tvName.text = celestialObject.name
         holder.tvType.text = celestialObject.type
         holder.tvLocation.text = celestialObject.location
+        holder.itemView.setOnClickListener{
+            onItemClickCallback.onItemClicked(listCelestialObject[holder.adapterPosition])
+        }
     }
 }
