@@ -14,13 +14,13 @@ fun generate() : List<CelestialObject>{
                 Mercury is the smallest and innermost planet in the Solar System. 
                 Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System. 
                 It is named after the Roman deity Mercury, the messenger of the gods.
-            """.trimIndent(),
+            """.trimIndent().replace("\n", " "),
             """
-                * Planet type: Terrestrial
-                * Radius: 2439,7 kilometers
+                • Planet type: Terrestrial
+                • Radius: 2439,7 kilometers
             """.trimIndent(),
             "https://en.wikipedia.org/wiki/Mercury_(planet)",
-            R.drawable.img_earth
+            R.drawable.img_mercury
         ),
         CelestialObject(
             "Venus",
@@ -51,11 +51,11 @@ fun generate() : List<CelestialObject>{
                 especially the Sun and the Moon, which is Earth's only natural satellite. 
                 Earth orbits around the Sun in 365.256 solar days, a period known as an Earth sidereal year. 
                 During this time, Earth rotates about its axis 366.256 times, that is, a sidereal year has 366.256 sidereal days
-            """.trimIndent(),
+            """.trimIndent().replace("\n", " "),
             """
-                * Planet type: Terrestrial
-                * Radius: 6731 kilometers
-                * Number of moons : 1
+                • Planet type: Terrestrial
+                • Radius: 6731 kilometers
+                • Number of moons : 1
             """.trimIndent(),
             "https://en.wikipedia.org/wiki/Earth",
             R.drawable.img_earth

@@ -38,7 +38,7 @@ class DetailActivity : AppCompatActivity() {
         tvInformationContent.text = intent.getStringExtra("fact")
         tvDescriptionContent.text = intent.getStringExtra("description")
         url = intent.getStringExtra("url")
-        //imgCelestialObject.setImageResource(intent.getIntExtra("image"))
+        imgCelestialObject.setImageResource(intent.getIntExtra("image", R.drawable.img_earth))
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
