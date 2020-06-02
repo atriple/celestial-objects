@@ -7,4 +7,12 @@
     <string name="dicoding_email">rahasia@dong.wkwk</string>
     <string name="action_about">About</string>
     <string name="profile_picture">Profile Picture</string>
+    <string name="heading_information">Information</string>
+    <string name="content_information">Contents</string>
+    <string name="heading_description">Descriptions</string>
+    <string name="content_description">Some long descriptions</string>
+    <string name="detail_planet_name">Earth</string>
+    <string name="detail_title">The Home Planet</string>
+    <string name="detail_image_description">Celestial Object Picture</string>
+    <string name="wikipedia">Wikipedia</string>
 </resources>

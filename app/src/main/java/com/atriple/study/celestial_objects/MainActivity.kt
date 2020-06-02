@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             override fun onItemClicked(data: CelestialObject) {
                 val detailIntent = Intent(this@MainActivity, DetailActivity::class.java)
                 detailIntent.putExtra("name", data.name)
+                detailIntent.putExtra("title", data.title)
+                detailIntent.putExtra("description", data.description)
+                detailIntent.putExtra("fact", data.facts)
+                detailIntent.putExtra("url", data.source)
+                detailIntent.putExtra("image", data.image)
                 startActivity(detailIntent)
             }
         })
